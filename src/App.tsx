@@ -1,24 +1,28 @@
-import { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { AppDispatch, fetchPokemon, RootState } from './store'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Root from './pages/Root';
+import HomePage from './pages/HomePage';
+import PokemonPage from './pages/PokemonPage';
+
+const router = createBrowserRouter ([
+  {
+    path: "/",
+    element: <Root />,
+    children: [
+      {
+        index: true, 
+        element: <HomePage />
+      },
+      {
+        path: "/pokemon",
+        element: <PokemonPage />
+      }
+    ]
+  }
+])
 
 function App() {
-  const dispatch = useDispatch<AppDispatch>();
-  const { data, isLoading, error } = useSelector((state: RootState) => state.pokemon);
+  return <RouterProvider router={router} />
 
-  useEffect(() => {
-    dispatch(fetchPokemon()); // Dispatch the thunk to fetch Pokémon
-  }, [dispatch]);
-
-  useEffect(() => {
-    console.log(data)
-  },[isLoading])
-
-  return (
-    <>
-     App
-    </>
-  )
 }
 
 export default App

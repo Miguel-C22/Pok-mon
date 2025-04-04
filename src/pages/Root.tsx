@@ -8,8 +8,10 @@ const Container = styled(Box)(({ route }: { route: string }) => ({
     maxWidth: 1200,
     width: "100%",
     margin: "0 auto",
-    height: "100vh",
+    minHeight: "100vh",
     backgroundImage: route === "/" ? 'url("/images/backGroundImage.webp")' : 'none',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center', 
     boxShadow: "20px 0px 10px rgba(0, 0, 0, 0.2), -20px 0px 10px rgba(0, 0, 0, 0.2)",
   }));
 

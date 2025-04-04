@@ -1,5 +1,3 @@
-import React from 'react'
-
 function PokemonCardsPage() {
   return (
     <div>PokemonCardsPage</div>

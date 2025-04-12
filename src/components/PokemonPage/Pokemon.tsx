@@ -16,7 +16,8 @@ const Container = styled(Box)({
     justifyContent: "center",
     gap: "5em",
     flexWrap: "wrap",
-    marginTop: "5em"
+    marginTop: "5em",
+    paddingBottom: "2em"
 })
 const PokemonStyle = styled(Box)({
     display: "flex",

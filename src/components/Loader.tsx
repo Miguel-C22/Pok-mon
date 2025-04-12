@@ -1,5 +1,4 @@
-import { Box, LinearProgress, Typography } from '@mui/material'
-import React from 'react'
+import { Box, LinearProgress } from '@mui/material'
 
 function Loader() {
   return (

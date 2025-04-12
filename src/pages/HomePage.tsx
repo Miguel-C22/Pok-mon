@@ -32,7 +32,7 @@ function HomePage() {
     <Container>
         <img 
             src="/images/pokemonLogo.png" 
-            alt="Pokemon Swing"
+            alt="Pokemon"
             style={{
                 width: '50%',
                 height: '100%',
@@ -44,7 +44,7 @@ function HomePage() {
             <PikachuContainer>
                 <img 
                     src="/images/pikachu.gif" 
-                    alt="Pokemon Swing"
+                    alt="Pokemon"
                     style={{
                         width: '100%',
                         height: '100%',

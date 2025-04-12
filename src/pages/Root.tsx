@@ -14,7 +14,6 @@ const Container = styled(Box)(({ route }: { route: string }) => ({
     backgroundPosition: 'center', 
     boxShadow: "20px 0px 10px rgba(0, 0, 0, 0.2), -20px 0px 10px rgba(0, 0, 0, 0.2)",
   }));
-
 const InnerContainer = styled(Box)({
     display: "flex",
     flexDirection: "column",
@@ -22,7 +21,12 @@ const InnerContainer = styled(Box)({
     gap: "1em",
     padding: "0 .5em"
   });
-  
+const HeaderContainer = styled(Box)({
+    backgroundColor: "#003060",
+    width: "100%",
+    padding: "2em 1em",
+    borderBottom: "2px solid yellow",
+  });
   
   function Root() {
     const location = useLocation();
@@ -31,7 +35,11 @@ const InnerContainer = styled(Box)({
     return (
       <Container route={currentRoute}>
         <InnerContainer>
-            {currentRoute !== "/" ? <Header /> : null}
+            {currentRoute !== "/" ? 
+            <HeaderContainer>        
+                <Header />
+            </HeaderContainer>
+            : null}
             <Outlet />
         </InnerContainer>
       </Container>

@@ -27,7 +27,7 @@ function Pokedex() {
         {!isLoading ?
             <> 
                 {!error ? 
-                  <Box>
+                  <Box sx={{paddingBottom: "1em"}}>
                     <Pokemon pokemonData={displayData}/> 
                     <Button 
                       style={{display: "flex", gap: "1em", alignContent: "center", margin: "auto"}} 

@@ -20,6 +20,8 @@ const BottomContainer = styled(Box)({
     gap: "2em",
     padding: "1em",
     alignItems: "center",
+    flexWrap: "wrap",
+    paddingBottom: "1em"
 })
 
 function PokemonPage() {

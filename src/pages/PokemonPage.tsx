@@ -43,7 +43,7 @@ function PokemonPage() {
         setDisplayData(data.slice(startIndex, endIndex));
       }, [data, page]);
 
-    const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+    const handleChange = (_: React.ChangeEvent<unknown>, value: number) => {
         setPage(value);
       };
 

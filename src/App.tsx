@@ -3,6 +3,7 @@ import Root from './pages/Root';
 import HomePage from './pages/HomePage';
 import PokemonPage from './pages/PokemonPage';
 import PokemonCardsPage from './pages/PokemonCardsPage';
+import Pokedex from './pages/Pokedex';
 
 const router = createBrowserRouter ([
   {
@@ -14,8 +15,12 @@ const router = createBrowserRouter ([
         element: <HomePage />
       },
       {
+        path: "/pokedex",
+        element: <Pokedex />
+      },
+      {
         path: "/pokemon",
-        element: <PokemonPage />
+        element: <PokemonPage/>
       },
       {
         path: "/pokemonCards",

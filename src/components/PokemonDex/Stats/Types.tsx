@@ -1,4 +1,4 @@
-import { typeColors } from '@/utils/typeColors';
+import { TypeBox } from '@/styles/globalStyles';
 import { Box, styled, Typography } from '@mui/material';
 
 interface TypesProps {
@@ -25,25 +25,17 @@ const TypesContainer = styled(Box)({
   alignItems: 'center',
   gap: '0.75em',
   flexWrap: 'wrap',
+  borderRadius: 4,
 });
-
-const TypeBox = styled(Typography)<{ typeName: string }>(({ typeName }) => ({
-  padding: '0.4em 0.9em',
-  borderRadius: '999px',
-  color: '#fff',
-  backgroundColor: typeColors[typeName] || 'gray',
-  textTransform: 'capitalize',
-  fontWeight: 600,
-  fontSize: '0.875rem',
-  boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
-}));
 
 function Types({ types }: TypesProps) {
   return (
     <Container>
       <Label>Types</Label>
       <TypesContainer>
-        <TypeBox typeName={types}>{types}</TypeBox>
+        {types.split(',').map((type) => (
+          <TypeBox typeName={type}>{type}</TypeBox>
+        ))}
       </TypesContainer>
     </Container>
   );

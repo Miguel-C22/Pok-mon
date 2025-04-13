@@ -15,17 +15,16 @@ export interface PokemonData {
     displayInfo: boolean;
   }
 
-const fetchPokemon = createAsyncThunk('pokemon/fetch', async () => {
+const fetchPokemon = createAsyncThunk('pokemon/fetch', async (limit: number) => {
     const TOTAL_POKEMON = 1010
-    const LIMIT = 10
 
     function getRandomOffset() {
-    return Math.floor(Math.random() * (TOTAL_POKEMON - LIMIT))
+    return Math.floor(Math.random() * (TOTAL_POKEMON - limit))
     }
 
     const offset = getRandomOffset()
 
-    const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=${offset}`);
+    const response = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`);
     const pokemonNames = response.data.results.map((pokemon: { name: string }) => pokemon.name);
 
     const pokemonData = await Promise.all(

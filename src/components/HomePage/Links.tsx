@@ -39,6 +39,10 @@ const StyledLinks = styled(Link)({
 function Links() {
   return (
     <Container>
+        <StyledLinks to="/pokedex">
+            Pokedex
+            <CatchingPokemonTwoToneIcon/>
+        </StyledLinks>
         <StyledLinks to="/pokemon">
             Pokemon 
             <CatchingPokemonTwoToneIcon/>

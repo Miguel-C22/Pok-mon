@@ -28,7 +28,7 @@ const pokemonSlice = createSlice({
     });
     builder.addCase(fetchPokemon.rejected, (state, action) => {
         state.isLoading = false
-        state.error = action.error
+        state.error = null
     });
   },
 });

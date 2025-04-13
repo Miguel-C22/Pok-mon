@@ -38,6 +38,7 @@ function Header() {
                 }}
             />
         </LinkStyle>
+        <LinkStyle to="/pokedex">Pokedex</LinkStyle>
         <LinkStyle to="/pokemon">Pokemon</LinkStyle>
         <LinkStyle to="/pokemonCards">Pokemon Cards</LinkStyle>
     </Container>
